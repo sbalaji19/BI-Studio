@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<server description="bi-studio">
+    <featureManager> 
+        <feature>beanValidation-2.0</feature>
+        <feature>servlet-4.0</feature>
+        <feature>ssl-1.0</feature>
+        <feature>jndi-1.0</feature>
+        <feature>jca-1.7</feature>
+        <feature>cdi-2.0</feature>
+        <feature>jdbc-4.2</feature>
+        <!-- feature>jms-2.0</feature -->
+        <feature>ejbPersistentTimer-3.2</feature>
+        <feature>appSecurity-3.0</feature>
+        <feature>appSecurity-2.0</feature>
+        <!-- feature>j2eeManagement-1.1</feature -->
+        <!-- feature>wasJmsServer-1.0</feature -->
+        <feature>javaMail-1.6</feature>
+        <feature>jaxrs-2.1</feature>
+        <feature>jpa-2.2</feature>
+        <!-- feature>jcaInboundSecurity-1.0</feature -->
+        <feature>jsp-2.3</feature>
+        <feature>jsonb-1.0</feature>
+        <feature>ejbLite-3.2</feature>
+        <feature>managedBeans-1.0</feature>
+        <feature>ejbHome-3.2</feature>
+        <feature>jaxws-2.2</feature>
+        <feature>jsonp-1.1</feature>
+        <feature>jaxrsClient-2.1</feature>
+        <feature>el-3.0</feature>
+        <feature>concurrent-1.0</feature>
+        <feature>appClientSupport-1.0</feature>
+        <feature>ejbRemote-3.2</feature>
+        <feature>jaxb-2.2</feature>
+        <feature>mdb-3.2</feature>
+        <feature>jacc-1.5</feature>
+        <feature>batch-1.0</feature>
+        <feature>ejb-3.2</feature>
+        <feature>jpaContainer-2.2</feature>
+        <feature>jaspic-1.1</feature>
+        <feature>distributedMap-1.0</feature>
+        <feature>websocket-1.1</feature>
+        <!-- feature>wasJmsSecurity-1.0</feature>
+        <feature>wasJmsClient-2.0</feature -->      
+    </featureManager>
+
+    <httpEndpoint httpPort="${default.http.port}" httpsPort="${default.https.port}"
+                  id="defaultHttpEndpoint" host="*" />
+
+    <!-- keyStore id="defaultKeyStore"/>
+
+    <basicRegistry id="basic" realm="ibm/api">
+        <user name="guest" password="password" />
+    </basicRegistry>
+
+
+  
+    <applicationManager autoExpand="true"/ -->
+
+    <applicationMonitor  />
+
+    <webApplication name="BiStudio" location="${app.location}" contextRoot="${app.context.root}"/>
+    <logging consoleLogLevel="INFO" />
+    
+    <!-- logging traceSpecification="${log.name}.*=${log.level}"/ -->
+</server>

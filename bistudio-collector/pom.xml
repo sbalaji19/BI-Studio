@@ -8,6 +8,7 @@
     </parent>
     <artifactId>bistudio-collector</artifactId>
     <packaging>pom</packaging>
+    <name>BIStudio::DataCollector</name>
     <modules>
         <module>bistudio-collector-jdbc</module>
     </modules>

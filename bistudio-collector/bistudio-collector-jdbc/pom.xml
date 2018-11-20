@@ -8,4 +8,5 @@
     </parent>
     <artifactId>bistudio-collector-jdbc</artifactId>
     <packaging>jar</packaging>
+    <name>BIStudio::DataCollector::Jdbc</name>
 </project>

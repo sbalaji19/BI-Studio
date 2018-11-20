@@ -11,5 +11,6 @@
     <name>BIStudio::DataCollector</name>
     <modules>
         <module>bistudio-collector-jdbc</module>
+        <module>bistudio-collector-elasticsearch</module>
     </modules>
 </project>

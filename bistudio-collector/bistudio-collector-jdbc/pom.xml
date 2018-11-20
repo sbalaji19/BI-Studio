@@ -3,12 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.bs</groupId>
-        <artifactId>bistudio</artifactId>
+        <artifactId>bistudio-collector</artifactId>
         <version>0.0.1</version>
     </parent>
-    <artifactId>bistudio-collector</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>bistudio-collector-jdbc</module>
-    </modules>
+    <artifactId>bistudio-collector-jdbc</artifactId>
+    <packaging>jar</packaging>
 </project>

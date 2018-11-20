@@ -5,7 +5,7 @@
     <artifactId>bistudio</artifactId>
     <version>0.0.1</version>
     <packaging>pom</packaging>
-    <name>BIStudio</name>
+    <name>BIStudio::Parent</name>
     
     <parent>
         <groupId>net.wasdev.wlp.maven.parent</groupId>
@@ -26,7 +26,7 @@
         <packaging.type>usr</packaging.type> 
         <scala.version>2.12</scala.version>
         <spark.version>2.4.0</spark.version>
-        <hadoop.home.dir></hadoop.home.dir>      
+        <hadoop.home.dir/>      
     </properties>
     
     <dependencies>
@@ -125,4 +125,8 @@
             </properties>
         </profile>
     </profiles>    
+  <modules>
+    <module>bistudio-web</module>
+    <module>bistudio-webstatic</module>
+  </modules>
 </project>

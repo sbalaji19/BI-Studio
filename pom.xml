@@ -51,6 +51,17 @@
             <artifactId>spark-sql_${scala.version}</artifactId>
             <version>${spark.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.omnifaces</groupId>
+            <artifactId>omnifaces</artifactId>
+            <version>3.2</version>
+        </dependency>
     </dependencies>
 
   
@@ -64,10 +75,11 @@
             </properties>
         </profile>
     </profiles>    
-  <modules>
-    <!-- module>bistudio-web</module -->
-    <module>bistudio-webstatic</module>
-    <module>bistudio-collector</module>
-    <module>bistudio-web</module>
-  </modules>
+    <modules>
+        <!-- module>bistudio-web</module -->
+        <module>bistudio-webstatic</module>
+        <module>bistudio-collector</module>
+        <module>bistudio-web</module>
+        <module>bistudio-security</module>
+    </modules>
 </project>

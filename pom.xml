@@ -14,7 +14,6 @@
     </parent>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -24,7 +23,10 @@
         <server.https.port>9443</server.https.port>
         <warContext>/bi</warContext>
         <package.file>${project.build.directory}/${project.artifactId}-${project.version}.zip</package.file>
-        <packaging.type>usr</packaging.type>       
+        <packaging.type>usr</packaging.type> 
+        <scala.version>2.12</scala.version>
+        <spark.version>2.4.0</spark.version>
+        <hadoop.home.dir></hadoop.home.dir>      
     </properties>
     
     <dependencies>
@@ -38,6 +40,16 @@
             <groupId>org.glassfish</groupId>
             <artifactId>javax.faces</artifactId>
             <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_${scala.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_${scala.version}</artifactId>
+            <version>${spark.version}</version>
         </dependency>
     </dependencies>
 
@@ -112,8 +124,5 @@
                 <packaging.type>runnable</packaging.type>
             </properties>
         </profile>
-    </profiles>
-  <modules>
-    <module>bisuudio-web</module>
-  </modules>
+    </profiles>    
 </project>

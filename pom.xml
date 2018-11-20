@@ -128,5 +128,6 @@
   <modules>
     <module>bistudio-web</module>
     <module>bistudio-webstatic</module>
+    <module>bistudio-collector</module>
   </modules>
 </project>

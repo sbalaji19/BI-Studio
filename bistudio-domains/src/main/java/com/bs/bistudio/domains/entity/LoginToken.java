@@ -8,16 +8,45 @@ package com.bs.bistudio.domains.entity;
 import com.bs.bistudio.domains.base.BaseEntity;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import static javax.persistence.EnumType.STRING;
 import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.PrePersist;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 /**
  *
  * @author Balaji.S <<sssbalajis@gmail.com>>
  */
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@EqualsAndHashCode(callSuper = false)
+@NamedQuery(
+        name = "LoginToken.remove",
+        query = "DELETE"
+        + "			FROM"
+        + "				LoginToken _loginToken"
+        + "			WHERE"
+        + "				_loginToken.tokenHash = :tokenHash"
+)
+@NamedQuery(
+        name = "LoginToken.removeExpired",
+        query = "DELETE"
+        + "			FROM"
+        + "				LoginToken _loginToken"
+        + "			WHERE"
+        + "				_loginToken.expiredDate < CURRENT_TIMESTAMP"
+)
 public class LoginToken extends BaseEntity {
 
     private static final long serialVersionUID = 1L;

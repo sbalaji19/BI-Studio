@@ -67,6 +67,25 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_${scala.version}</artifactId>
             <version>${spark.version}</version>
+        </dependency>
+        <!--  testing -->
+          <dependency>
+            <groupId>org.jboss.arquillian.junit</groupId>
+            <artifactId>arquillian-junit-container</artifactId>
+            <version>1.4.1.Final</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.protocol</groupId>
+            <artifactId>arquillian-protocol-servlet</artifactId>
+            <version>1.4.1.Final</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
         </dependency>       
     </dependencies>
     <dependencyManagement>
@@ -163,5 +182,11 @@
         <module>bistudio-web</module>
         <module>bistudio-security</module>
         <module>bistudio-util</module>
+        <module>bistudio-domains</module>
     </modules>
+    
+    <!-- scm>
+        <developerConnection>scm:git:git@github.com:</developerConnection>
+        <tag>HEAD</tag>
+    </scm -->
 </project>
